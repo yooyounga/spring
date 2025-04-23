@@ -12,14 +12,11 @@ import com.example.lesson02.service.UsedGoodsBO;
 @RestController
 public class Lesson02Ex01RestController {
 	@Autowired //spring bean 
+	private  UsedGoodsBO usedGoodsBO;
 	//http://localhost/lesson02/ex01
 	@RequestMapping("/lesson02/ex01")
 	public List<UsedGoods> ex01(){
-		try {
-			return UsedGoodsBO.getUsedGoodsList();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		return usedGoodsBO.getUsedGoodsList();
+		
 	}
 }
