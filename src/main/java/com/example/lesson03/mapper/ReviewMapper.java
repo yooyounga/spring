@@ -8,5 +8,5 @@ import com.example.lesson03.domain.Review;
 public interface ReviewMapper {
 	//input :X
 	//output :단건 Review
-	public Review selectReviewById();
+	public Review selectReviewById(int id);
 }
