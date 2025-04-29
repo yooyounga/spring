@@ -16,24 +16,6 @@
 		`new_review` 
 		WHERE id=#{id};
 	</select>
-	<select id="insertReview" resultType="com.example.lesson03.domain.Review">
-		insert into new_review (`storeId`,
-			`menu`,
-			`userName`,
-			`point`,
-			`review`)
-			values(
-			#{menu}
-			,#{userName}
-			,#{point}
-			,#{review}
-			,#{}
-			) 
-		FROM 
-		
-		`new_review` 
-		WHERE id=#{id};
-	</select>
 	<insert id="insertReview">
 		INSERT INTO new_review (
 		    storeId
@@ -81,4 +63,7 @@
 		SET review=#{review} ,updatedAt=now() 
 		where id=#{id}
 	</update>
+	<delete id="deleteReviewById" parameterType="int">
+		DELETE from new_review where id=#{id}
+	</delete>
 </mapper>

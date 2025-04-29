@@ -24,4 +24,14 @@ public class ReviewBO {
 	public int updateReview(int id,String review) {
 		return reviewMapper.updateReviewById(id,review);
 	}
+	/*
+	결과값을 리턴함.
+	public int deleteReview(int id) {
+		return reviewMapper.deleteReviewById(id);
+	}
+	*/
+	//리턴값을 안 줄수도 있음.
+	public void deleteReview(int id) {
+		int rowCount=reviewMapper.deleteReviewById(id);
+	}
 }

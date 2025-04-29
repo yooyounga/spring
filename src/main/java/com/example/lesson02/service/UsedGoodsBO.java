@@ -15,9 +15,9 @@ public class UsedGoodsBO {
 	//input :x 컨트롤러로부터 받아옴
 	//output:(Mapper에서 받아온 걸 )List<UsedGoods> 컨트롤러에게 준다
 	public List<UsedGoods> getUsedGoodsList(){
-		/*List<UsedGoods> usedGoodsList=usedGoodsMapper.selectUsedGoodsList();
+		List<UsedGoods> usedGoodsList=usedGoodsMapper.selectUsedGoodsList();
 		return usedGoodsList;
-		*/
-		return usedGoodsMapper.selectUsedGoodsList();
+		
+		//return usedGoodsMapper.selectUsedGoodsList();
 	}
 }

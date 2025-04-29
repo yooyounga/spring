@@ -24,4 +24,6 @@ public interface ReviewMapper {
 			//하나의 map으로 구성
 			@Param("id") int id,
 			@Param("review") String review);
+	
+	public int deleteReviewById(int id);
 }
