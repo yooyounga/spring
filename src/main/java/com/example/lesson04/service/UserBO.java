@@ -19,4 +19,10 @@ public class UserBO {
 			) {
 		userMapper.insertUser(name, yyyymmdd, email, introduce);
 	}
+	
+	//input :email
+	//output:boolean true->중복
+	public boolean  isDuplicateByEmail(String email) {
+		return userMapper.isDuplicateByEmail(email);
+	}
 }

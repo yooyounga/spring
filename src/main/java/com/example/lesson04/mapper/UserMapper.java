@@ -11,4 +11,6 @@ public interface UserMapper{
 	,@Param("email") String email
 	,@Param("introduce") String introduce
 	);
+	
+	public boolean  isDuplicateByEmail(String email) ;
 }
